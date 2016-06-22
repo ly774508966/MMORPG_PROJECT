@@ -14,9 +14,9 @@ public class MainServer{
 	public static Server server;
 
 	public static void main(String[] args) throws JAXBException {
-		Settings.loadSettings();
+		Settings.loadSettings("settings/");
 		World.loadWorlds();
-		server = new Server(9999);
+		server = new Server(Integer.parseInt(Settings.getValue("network.conf", "server.port")));
 	}
 	
 }
