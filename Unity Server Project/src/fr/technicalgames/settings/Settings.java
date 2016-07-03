@@ -20,7 +20,7 @@ public class Settings {
 			settings.put(f.getName(), new SettingsFile(f.getName(), path));
 		}
 		Log.println(Log.INFO, "Configuration files loaded");
-	}
+	} 
 	
 	public static String getValue(String filename,String dataname){
 		return settings.get(filename).getValue(dataname);
